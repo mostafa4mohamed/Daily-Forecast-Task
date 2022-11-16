@@ -1,0 +1,120 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "fd87d6b1fdf4fd137d0e5308c86e27cc",
+    "entities": [
+      {
+        "tableName": "City",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `name` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "DailyForecastData",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`daily_forecast_id` INTEGER PRIMARY KEY AUTOINCREMENT, `city_id` INTEGER, `clouds` TEXT, `dt` INTEGER, `dt_txt` TEXT, `main` TEXT, `pop` INTEGER, `sys` TEXT, `visibility` INTEGER, `weather` TEXT, `wind` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "daily_forecast_id",
+            "columnName": "daily_forecast_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "city_id",
+            "columnName": "city_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "clouds",
+            "columnName": "clouds",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dt",
+            "columnName": "dt",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dt_txt",
+            "columnName": "dt_txt",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "main",
+            "columnName": "main",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "pop",
+            "columnName": "pop",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "sys",
+            "columnName": "sys",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "visibility",
+            "columnName": "visibility",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "weather",
+            "columnName": "weather",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "wind",
+            "columnName": "wind",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "daily_forecast_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'fd87d6b1fdf4fd137d0e5308c86e27cc')"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Daily Forecast Task</string>
+    <string name="test">test</string>
+    <string name="internet_connection">Check Internet connection firstly :)</string>
+    <string name="know_error">Know Error</string>
+    <string name="x_api_key_error">x_api_key_error</string>
+    <string name="auth_error">auth_error</string>
+    <string name="known_error">known_error</string>
+    <string name="empty_data">Empty Data</string>
+    <string name="name">Name :</string>
+    <string name="search">search</string>
+    <string name="enter_search_key">enter search key</string>
+    <string name="enter_your_city_name_to_start">Enter Your City Name To Start</string>
+    <string name="retry">Retry</string>
+    <string name="sorry_error">Sorry Error</string>
+    <string name="description">Description :</string>
+    <string name="humidity">Humidity :</string>
+    <string name="temp">Temp :</string>
+    <string name="wind_speed">Wind speed :</string>
+    <string name="it_is_not_accurate_data">it is not accurate data !</string>
+</resources>
